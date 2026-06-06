@@ -1,0 +1,42 @@
+# ===== Site Settings =====
+title: "Young's Homepage"
+name: "MO Yang (Young)"
+description: >-
+  M.Sc. AI student at City University of Hong Kong.
+  Research interests: Large Language Models, AI Agents, AI Safety.
+email: "yangmo5-c@my.cityu.edu.hk"
+github_username: "yangmo5"
+baseurl: ""              # leave empty for user/org site (yangmo5.github.io)
+url: "https://yangmo5.github.io"
+
+# ===== Author Info =====
+author:
+  name: "MO Yang (杨莫)"
+  email: "yangmo5-c@my.cityu.edu.hk"
+  github: "https://github.com/yangmo5"
+  affiliation: "City University of Hong Kong"
+  role: "M.Sc. Student in Artificial Intelligence"
+
+# ===== Build Settings =====
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# ===== Plugins =====
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# ===== Defaults =====
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: null
