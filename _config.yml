@@ -34,9 +34,17 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+# ===== Blog Settings =====
+permalink: /blog/:year/:month/:day/:title/
+
 # ===== Defaults =====
 defaults:
   - scope:
       path: ""
     values:
-      layout: null
+      layout: default
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post

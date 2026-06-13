@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h2 class="post-title">{{ page.title }}</h2>
+    <p class="post-date">{{ page.date | date: "%b. %d, %Y" }}</p>
+  </header>
+  <div class="post-content">
+    {{ content }}
+  </div>
+  <hr class="section-divider">
+  <p style="margin-top:16px;">
+    <a href="/blog/">← Back to Blog</a>
+  </p>
+</article>

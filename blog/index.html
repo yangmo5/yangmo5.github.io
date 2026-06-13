@@ -1,0 +1,25 @@
+---
+layout: default
+title: Blog | Young
+---
+
+<h2 style="padding-top:16px;">Blog</h2>
+<p style="color:#666;margin-bottom:24px;">Thoughts on AI research, agents, safety, and beyond.</p>
+
+{% if site.posts.size > 0 %}
+  {% for post in site.posts %}
+  <div class="post-card">
+    <h3 class="post-card-title">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h3>
+    <p class="post-date">{{ post.date | date: "%b. %d, %Y" }}</p>
+    <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 60 }}</p>
+    <a href="{{ post.url | relative_url }}" class="post-read-more">Read more →</a>
+  </div>
+  {% unless forloop.last %}
+  <hr class="section-divider">
+  {% endunless %}
+  {% endfor %}
+{% else %}
+  <p style="color:#999;text-align:center;padding:40px 0;">No posts yet — check back soon!</p>
+{% endif %}
